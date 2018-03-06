@@ -1,0 +1,5 @@
+﻿ДОВІДНИК - https://www.w3.org/TR/html4/index/elements.html
+
+https://webref.ru/course/html-content/forms
+
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form

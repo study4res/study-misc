@@ -1,0 +1,10 @@
+CSS:
+
+display: block, flex , inline, block-inline 
+position
+
+- сброс елементів!
+
+-margin: 0, auto; - вирівнювання по центру
+
+- для меню краще використати список <ul> </ul>
