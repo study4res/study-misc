@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> вибір туру та реєстрація </title>
+		<meta charset="UTF-8">
+		<meta name=keywords  content="зелений туризм тур зеленого туризму">
+		<meta name=description content="вибір туру зеленого туризму реєстрація на тур зеленого туризму">
+		<link rel="stylesheet" type="text/css" href="./mystyle.css">
+	</head>
+	<body>
+		
+		<div class="center">
+			<img  src="./img/green_logo.png" width="150" alt="зелений туризм"> 
+		</div>
+		<div class="mainText">
+			<a href="./index.html"> Повернутись на головну </a>
+		</div>
+		<div>
+			<form method="post">
+				<p><label> <b>Вид туру</b> </label>
+				<select>
+					<option>Гірський</option>
+					<option>Лісовий</option>
+					<option>Озерний</option>
+					<option>Морський</option>
+					<option>Змішаний</option>
+				</select></p>
+				
+				<p><label> <b>Дата початку </b>
+				<input type="date" name="date">
+				</label></p>
+
+				<p><label> <b> Дата кінця </b>
+				<input type="date" name="date">
+				</label></p>
+				<p><label><b> Оберіть бажаний розмір групи:</b></label><br>
+				<label>
+				5-10 осіб <input type="radio" name="group" value="smallGroup">
+				</label><br>
+				<label>
+				11-30 осіб <input type="radio" name="group" value="bigGroup">
+				</label><br>
+				<label>
+				будь-яка група <input type="radio" name="group" value="anyGroup">
+				</label><br>
+				<label>
+				без групи (одиночний тур) <input type="radio" name="group" value="soloGroup">
+				</label> <br></p>
+
+				<p><label> <b>Додаткові опції:</b></label><br>
+				<label> Попередній інструктаж
+					<input type="checkbox" name="instructor" value="instructor">
+				</label><br>
+				<label> Рюкзак
+					<input type="checkbox" name="backpack" value="backpack">
+				</label><br>
+				<label> Набір для виживання
+					<input type="checkbox" name="survivalKit" value="survivalKit">
+				</label><br></p>
+
+				<p><label><b>Ім&#39;я</b>
+				<input type="text" name="firstName" placeholder="Ім'я"> 
+				</label></p>
+				<p><label> <b>Прізвище</b>
+				<input type="text" name="secondName" placeholder="Прізвище"> 
+				</label></p>
+				<p><label> <b> Вік (18-60 років)</b>
+				<input type="number" name="age" placeholder="Вік" min="18" max="60"> 
+				</label></p>
+				<p><label> <b>E-mail</b>
+				<input type="email" name="email" placeholder="example@mail.com">
+				</label></p>
+				<p><label> <b> Мобільний телефон</b>
+				<input type="tel" name="telephone" placeholder="телефон">
+				</label></p>
+				<p> <label><b> Додаткова інформація (до 200 символів)</b><br>
+				<textarea name="additionalText" maxlength="200"> </textarea>
+				</label></p>
+				<p><label> <b>Я ознайомився та згоден з <a href="https://www.microsoft.com/uk-ua/useterms"> умовами </a> надання послуг </b>
+				<input type="checkbox" name="termsOfUse" value="acceptTerms">
+				</label>
+				<input type="submit" value="подати заявку на тур"></p>
+			</form>
+		</div>
+	</body>
+</html>

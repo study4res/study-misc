@@ -1,0 +1,78 @@
+html, body, p, div, ul, li, h1, h2, img, a {
+    padding: 0;
+    margin: 0;
+}
+
+.screenWidth {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.logoWrapper {
+  text-align: center;
+  margin: auto;
+}
+.logoElement {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto;
+}
+
+.menu {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 50px;
+  text-align: center;
+}
+.menu li {
+  display: inline-block;
+  font-size: 15pt;
+  margin-right: 10px;
+  background-color: #42f44e;
+}
+.menu li a {
+  text-decoration: none;
+}
+
+.content {
+  }
+.content .article {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #3d4be2;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.content .article img {
+  width:80px;
+  float: left;
+  margin-right: 8px;
+}
+
+.imgFormat {
+    width: 80px;    
+    }
+.mainText {
+    color: green;
+    font-size:40px;
+    text-align:center;
+    }
+    
+.mainborder {
+    //margin-left: 150px;
+    //margin-right: 150px;
+    border-right-style: 50px solid transparent;
+   
+    border-image: url(green_logo.jpg) 30 round;
+    
+  //  border-right-style: solid;
+  //  border-left-style: solid;
+   // border-width: 10px;
+    //border-color:green;
+   // border-image: url(border.jpg) 50 repeat;
+    }
+
+//hover накидати!!!!
+    
