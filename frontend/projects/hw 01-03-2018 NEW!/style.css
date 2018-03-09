@@ -1,4 +1,4 @@
-html, body, div, a, h1, h2, h3, p {
+html, body, div, a, h1, h2, h3, p, img {
   margin:0;
   padding:0;
 }
@@ -15,18 +15,76 @@ body {
 }
 .header {
   flex: 0 0;
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap; /*Ã‘â€¡ÃÂ¾ÃÂ³ÃÂ¾ ÃÂ²ÃÂ¾ÃÂ½ÃÂ¾ ÃÂ½ÃÂµ Ã‘â‚¬ÃÂ¾ÃÂ±ÃÂµ ÃÂºÃÂ¾ÃÂ»ÃÂ¸ Ã‘Â ÃÂ·ÃÂ³ÃÂ¾Ã‘â‚¬Ã‘â€šÃÂ°Ã‘Å½ ÃÂ²Ã‘â€“ÃÂºÃÂ½ÃÂ¾?*/
-  align-items:center;
-  justify-content: center;
   margin-top: 10px;
+}
+
+.header .logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  border-top: orange solid 4px;
+}
+.header .logo-wrapper img {
+  max-height: 90%;
+}
+.header .logo-wrapper .logo{
+  font-size: 25pt;
+  text-transform: capitalize;
+  align-self: center;
+
+}
+.logo-wrapper .motto {
+  padding-left: 3%;
+  margin-left: 2%;
+  border-left: grey solid 2px;
+  align-self: center;
+  margin-right: auto;
+}
+.header .logo-wrapper h1 {
+  text-transform: uppercase;
+  font-size: 25;
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: normal;
+  color: orange;
+}
+.header .logo-wrapper h2 {
+  font-size: 15;
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: normal;
+}
+.menu {
   border-top: grey solid 2px;
   border-bottom: grey solid 2px;
+  font-size: 20pt;
+  margin: 0;
+  list-style:none;
+  padding-left:0;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
-.header img {
-  max-height:80px;
+.menu li{
+  display: inline;
+  margin:0;
+  padding-right:8%;
 }
+.menu a {
+  text-decoration:none;
+}
+.menu a:visited {
+  color:grey;
+}
+.menu a:active {
+  color:grey;
+}
+
+
+
+/*  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+
 .menu {
   font-size: 20pt;
   margin: 0;
@@ -51,49 +109,45 @@ body {
 }
 .menu a {
   text-decoration:none;
-}
+}*/
 
-.content {
-  margin-bottom: auto;
+.content1 {
   display:flex;
   flex-direction: row;
   margin-top:10px;
-  position: relative;
 }
-.content .article {
-  flex-basis: 60%;
-  background:0;
+.content1 .slideshow {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding-left:1%;
   padding-right:1%;
+  font-size: 15pt;
+  border: grey solid 2px;
 }
-.content .leftcol{
-    flex-basis: 20%;
+.content1 .slideshow .slide img {
+    width: 60%;
+  }
+.content1 .slideshow .slide {
+  text-align: center;
+}
+.content1 .slideshow .slide-nav{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: grey solid 1px;
+  border-top: 0;
+}
+.content1 .general{
     padding-right:1%;
     padding-left:1%;
     background:0;
 } 
-.content .rightcol{
-    flex-basis: 20%;
-    padding-right:1%;
-    padding-left:1%;
-    background:0;
-} 
-.content .border1 {
-  position:absolute;
-  background-color:grey;
-  width: 2px;
-  height:95%;
-  top:2.5%;
-  left:20%;
+.content1 .general img {
+  max-width: 50%;
 }
-.content .border2 {
-  position:absolute;
-  background-color:grey;
-  width: 2px;
-  height:95%;
-  top:2.5%;
-  left:79%;
-}
+
 
 
 .footer {
