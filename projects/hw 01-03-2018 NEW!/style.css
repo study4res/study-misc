@@ -2,10 +2,13 @@ html, body, div, a, h1, h2, h3, p, img {
   margin:0;
   padding:0;
 }
+html {
+  width:100%;
+}
 body {
   width:1200px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
   height:100vh;
   color: rgb(79, 75, 74);
 }
