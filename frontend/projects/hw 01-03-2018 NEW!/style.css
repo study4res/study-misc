@@ -2,20 +2,20 @@ html, body, div, a, h1, h2, h3, p, img {
   margin:0;
   padding:0;
 }
-html {
-  height: 100%;
-}
 body {
-  display:flex;
-  flex-direction:column;
   width:1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10%;
+  margin-right: 10%;
   height:100vh;
+  color: rgb(79, 75, 74);
 }
+.link a{
+  text-decoration: none; 
+  background-color: black;
+  color:white;
+} 
 .header {
-  flex: 0 0;
-  margin-top: 10px;
+  margin-top: 2%;
 }
 
 .header .logo-wrapper {
@@ -23,21 +23,29 @@ body {
   flex-direction: row;
   border-top: orange solid 4px;
 }
-.header .logo-wrapper img {
-  max-height: 90%;
-}
 .header .logo-wrapper .logo{
-  font-size: 25pt;
+  min-width: 25%;
+}
+.header .logo-wrapper .logo::before { /*це спроба вирівняти вертикально елементи div без використання flex*/
+  content:"";
+  display:inline-block;
+  height:100%;
+  vertical-align: middle;
+}
+.header .logo-wrapper .logo img, 
+.header .logo-wrapper .logo h1 {
+  display:inline;
+  max-height: 90%;
   text-transform: capitalize;
-  align-self: center;
-
+  color: orange;
+  font-size: 30pt;
+  vertical-align: middle;
 }
 .logo-wrapper .motto {
   padding-left: 3%;
-  margin-left: 2%;
   border-left: grey solid 2px;
   align-self: center;
-  margin-right: auto;
+  margin: 20px 0;
 }
 .header .logo-wrapper h1 {
   text-transform: uppercase;
@@ -53,7 +61,7 @@ body {
   font-style: normal;
   font-weight: normal;
 }
-.menu {
+.header .menu {
   border-top: grey solid 2px;
   border-bottom: grey solid 2px;
   font-size: 20pt;
@@ -62,77 +70,47 @@ body {
   padding-left:0;
   padding-top: 1%;
   padding-bottom: 1%;
+  text-transform: uppercase;
 }
-.menu li{
+.header .menu li{
   display: inline;
   margin:0;
   padding-right:8%;
 }
-.menu a {
+.header .menu a {
   text-decoration:none;
-}
-.menu a:visited {
   color:grey;
 }
-.menu a:active {
-  color:grey;
-}
-
-
-
-/*  display:flex;
-  flex-direction: row;
-  align-items:center;
-  justify-content: center;
-
-.menu {
+.content-name {
   font-size: 20pt;
-  margin: 0;
-  padding:0;
-  list-style:none;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-transform: uppercase;
 }
-.menu li{
-  display: inline;
-  padding:0;
-  padding:10px;
-  position:relative;
-}
-.menu li + li:before {
-  content:"";
-  background-color: grey;
-  width:2px;
-  height:5px;
-  position:absolute;
-  height: 50%;
-  bottom: 25%;
-  left:-5px;
-}
-.menu a {
-  text-decoration:none;
-}*/
-
 .content1 {
   display:flex;
   flex-direction: row;
+  justify-content: space-around;
   margin-top:10px;
+  padding-bottom: 4%;
+  border-bottom: grey solid 2px;
 }
 .content1 .slideshow {
+  flex-basis: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  padding-left:1%;
-  padding-right:1%;
+  padding-left:0;
+  padding-right:0;
   font-size: 15pt;
   border: grey solid 2px;
 }
-.content1 .slideshow .slide img {
-    width: 60%;
-  }
 .content1 .slideshow .slide {
+  flex: 1 1 400px;
   text-align: center;
+  background:url(img/port1.jpg);
+  background-size: cover;
 }
 .content1 .slideshow .slide-nav{
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -140,29 +118,188 @@ body {
   border-top: 0;
 }
 .content1 .general{
+    flex-basis: 100%;
+    flex-grow: 1;  
     padding-right:1%;
     padding-left:1%;
     background:0;
-} 
-.content1 .general img {
-  max-width: 50%;
-}
-
-
-
-.footer {
-  flex-shrink:0;
-  display:flex;
-  flex-direction:row;
-  justify-content: center;
-  padding: 1%;
+    display: flex;
+  flex-direction: column;
   
+} 
+.content1 .general .illustration {
+    max-height:300px;
+    flex: 1 1 100%;
+    background: url(img/general-photo.jpg);
+    background-size: cover;
 }
-.footer .item{
-  flex-grow:1;
-  background: lightblue;
-  border-top: grey solid 2px;
+
+.content1 .article {
+  font-size: 15pt;
+  text-align: justify;
+}
+.content1 .article .link {
+  text-align: right;
+  font-size:10pt;
+}
+.content2 {
   display: flex;
-  flex-direction:row;
-  justify-content: center;
+  flex-direction: row;
+  margin-top: 2%;
+}
+.content2 .news {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 30%; /*в усіх блоках цього flexbox  задав baseline у відсотках. Якщо виставляти "0", 
+  то InternetExplorer 11 неправильно відображає середній елемент .about */
+}
+.content2 .news h2 {
+  font-size: 20pt;
+  text-transform: uppercase;
+}
+.content2 .news .item{ /*тут не роблять "відсотки" в марджин*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px 5px 5px 0;
+  border-bottom: grey dotted 1px;
+  padding-bottom: 5px;
+}
+.content2 .news .item .date{
+  border-right:grey solid 1px;
+  font-size: 15pt;
+  flex 0 0 0;
+  padding-right:7px;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+.content2 .news .item .date .number {
+  color: orange;
+  font-size: 20pt;
+}
+.content2 .news .item .text h3 {
+  font-size: 15pt;
+  font-weight: bold; 
+}
+.content2 .news .item .text{
+  padding-left: 4%;
+}
+.content2 .about {
+  flex: 1 1 30%;
+  display:block;
+  border-right: grey solid 2px;
+  border-left: grey solid 2px;
+  padding-left: 1%;
+  padding-right: 1%;
+ 
+}
+.content2 .about h2 {
+  font-size: 20pt;
+  text-transform: uppercase;
+}
+.content2 .about .text {
+  font-size: 12pt;
+  text-align: justify;
+}
+.content2 .about .link {
+  text-align: right;
+  font-size:10pt;
+
+}
+.content2 .contact {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1%;
+}
+.content2 .contact h2 {
+  margin-left: 4%;
+  font-size: 20pt;
+  text-transform: uppercase;
+}
+.content2 .contact .item {
+  display: flex;
+  flex-direction: row;
+}
+.content2 .contact .item .imgs{
+  flex-basis: 15%;
+  text-align: center;
+}
+.content2 .contact .item .text{
+  align-self: center;
+}
+
+.header-clients {
+  margin-top: 3%;
+  width:100%;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+}
+.header-clients:before, .header-clients:after{
+  content: "";
+  display: inline-block;
+  width: 5%;
+  margin: 0 1% 0 0;
+  vertical-align: middle;
+  border-bottom: grey 2px solid;
+} 
+.header-clients:after{
+  width: 79%;
+  margin: 0 0 0 1%;
+}
+
+.clients{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-right: 8%;
+  padding-left:8%;
+  align-items:center;
+  border-bottom: grey solid 2px;
+}
+
+.footer{
+  margin-top:3%;
+  text-align: center;
+}
+.footer .img{
+  display: inline-block;
+  vertical-align: middle;
+}
+.footer .img img {
+  max-width: 80px;
+}
+.footer .logo{
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: capitalize;
+  font-size: 20pt;
+}
+.footer .menu li  {
+  list-style:none;
+  font-size:14pt;
+  display:inline;
+  text-transform:uppercase;
+  position:relative;
+  margin:0 0 0 0;
+  padding: 0 10px;
+}
+.footer .menu a {
+  text-decoration:none;
+  color:grey;
+}
+.footer .menu li + li:before {
+  content:"";
+  position: absolute;
+  width: 2px;
+  background-color:grey;
+  height:70%;
+  bottom:15%;
+  left:0px;
+}
+.footer .copyright{
+  font-size:15pt;
+  color:grey;
+  margin-bottom:2%;
 }

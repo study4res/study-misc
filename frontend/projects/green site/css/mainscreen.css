@@ -1,0 +1,109 @@
+html, body, p, div, ul, li, h1, h2, h3, img, a {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height:100%;
+}
+
+body {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right:auto;
+    height: 100%;
+}
+
+.logo {
+  text-align: center;
+  margin: auto;
+}
+.logo .item {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto;
+  text-transform:uppercase;
+  color:#429920;
+}
+.logo .item img {
+  width: 80px;
+}
+
+
+.menu {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 50px;
+  text-align: center;
+}
+.menu li {
+  position:relative;
+  display: inline-block;
+  font-size: 15pt;
+  margin-right: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #3d4be2;
+  border-radius: 5px;
+  padding: 3px;
+}
+.menu li ul{
+  display:none;
+  position: absolute;
+  left: -2px;
+  
+    
+}
+.menu li ul li{
+  background-color: #42f44e;
+  display:block;
+}
+.menu li:hover {
+  background-color: #42f44e;
+}
+.menu li:hover ul{
+  display:block;
+}
+
+.menu li a {
+  text-decoration: none;
+}
+
+.mainWrapper {
+    display:flex;
+    flex-direction: column;
+    height: 75%; /* чому коли ставимо 100%, то блок вилазить за нижню межу батьківського елемента body?. 
+    як взагалі зробити, щоб нижня межа блока була виставлена чітко по нижній межі батьківського блока?*/
+    justify-content: space-between;/* як зробити, щоб футер був завжди прижатий до низу вікна браузера?  */
+    /*в мене вийшло тільки "на глазок" це все підбирати. при цьому в в IE 11 нормально не робить */
+}
+.content {
+}
+.content .article {
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.content .article p {
+  text-indent: 30px;
+  text-align: justify;
+}
+.content .article img {
+  width:80px;
+  float: left;
+  margin-right: 8px;
+}
+
+.footer {
+    text-align: center;
+    }
+.footer .item {
+    display: inline-block;
+    vertical-align:middle;
+}
+.footer img { 
+    max-width: 100px;
+    max-height: 50px;
+}
+
+    

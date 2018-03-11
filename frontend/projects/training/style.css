@@ -1,0 +1,114 @@
+html, body, div, a, h1, h2, h3, p {
+  margin:0;
+  padding:0;
+}
+html {
+  height: 100%;
+}
+body {
+  display:flex;
+  flex-direction:column;
+  width:1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height:100vh;
+}
+.header {
+  flex: 0 0;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap; /*Ã‘â€¡ÃÂ¾ÃÂ³ÃÂ¾ ÃÂ²ÃÂ¾ÃÂ½ÃÂ¾ ÃÂ½ÃÂµ Ã‘â‚¬ÃÂ¾ÃÂ±ÃÂµ ÃÂºÃÂ¾ÃÂ»ÃÂ¸ Ã‘Â ÃÂ·ÃÂ³ÃÂ¾Ã‘â‚¬Ã‘â€šÃÂ°Ã‘Å½ ÃÂ²Ã‘â€“ÃÂºÃÂ½ÃÂ¾?*/
+  align-items:center;
+  justify-content: center;
+  margin-top: 10px;
+  border-top: grey solid 2px;
+  border-bottom: grey solid 2px;
+}
+.header img {
+  max-height:80px;
+}
+.menu {
+  font-size: 20pt;
+  margin: 0;
+  padding:0;
+  list-style:none;
+}
+.menu li{
+  display: inline;
+  padding:0;
+  padding:10px;
+  position:relative;
+}
+.menu li + li:before {
+  content:"";
+  background-color: grey;
+  width:2px;
+  height:5px;
+  position:absolute;
+  height: 50%;
+  bottom: 25%;
+  left:-5px;
+}
+.menu a {
+  text-decoration:none;
+}
+
+.content {
+  margin-bottom: auto;
+  display:flex;
+  flex-direction: row;
+  margin-top:10px;
+  position: relative;
+}
+.content .article {
+  flex-basis: 60%;
+  background:0;
+  padding-left:1%;
+  padding-right:1%;
+}
+.content .leftcol{
+    flex-basis: 20%;
+    padding-right:1%;
+    padding-left:1%;
+    background:0;
+} 
+.content .rightcol{
+    flex-basis: 20%;
+    padding-right:1%;
+    padding-left:1%;
+    background:0;
+} 
+.content .border1 {
+  position:absolute;
+  background-color:grey;
+  width: 2px;
+  height:95%;
+  top:2.5%;
+  left:20%;
+}
+.content .border2 {
+  position:absolute;
+  background-color:grey;
+  width: 2px;
+  height:95%;
+  top:2.5%;
+  left:79%;
+}
+
+
+.footer {
+  flex-shrink:0;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  padding: 1%;
+  
+}
+.footer .item{
+  flex-grow:1;
+  background: lightblue;
+  border-top: grey solid 2px;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+}
